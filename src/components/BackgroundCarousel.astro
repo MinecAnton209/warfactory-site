@@ -1,0 +1,47 @@
+﻿---
+const images = [
+    '/bg/bg1.webp',
+    '/bg/bg2.webp',
+    '/bg/bg3.webp',
+    '/bg/bg4.webp',
+    '/bg/bg5.webp',
+    '/bg/bg6.webp',
+];
+---
+
+<div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="absolute inset-0 z-10 bg-gradient-to-b from-black/60 via-black/10 to-black/60"></div>
+
+    <div class="absolute inset-0 z-10 bg-black/30 backdrop-brightness-75"></div>
+
+    <div class="absolute inset-0 z-0" id="bg-carousel">
+        {images.map((img, index) => (
+                <img
+                        src={img}
+                        alt=""
+                        class="absolute inset-0 w-full h-full object-cover transition-opacity duration-[3000ms] ease-in-out filter blur-[3px] scale-105 opacity-0"
+                        data-index={index}
+                />
+        ))}
+    </div>
+</div>
+
+<script>
+    const images = document.querySelectorAll('#bg-carousel img') as NodeListOf<HTMLElement>;
+
+    if (images.length > 0) {
+        let current = Math.floor(Math.random() * images.length);
+
+        images[current].style.opacity = '1';
+
+        if (images.length > 1) {
+            setInterval(() => {
+                images[current].style.opacity = '0';
+
+                current = (current + 1) % images.length;
+
+                images[current].style.opacity = '1';
+            }, 8000);
+        }
+    }
+</script>

@@ -2,11 +2,13 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 import tailwindcss from '@tailwindcss/vite';
+import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
 	integrations: [
-		starlight({
+        icon(),
+		/*starlight({
 			title: 'Docs with Tailwind',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
@@ -23,7 +25,7 @@ export default defineConfig({
 				},
 			],
 			customCss: ['./src/styles/global.css'],
-		}),
+		}),*/
 	],
 	vite: {
 		plugins: [tailwindcss()],

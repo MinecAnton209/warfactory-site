@@ -1,0 +1,134 @@
+﻿---
+import '../styles/global.css';
+import BackgroundCarousel from "../components/BackgroundCarousel.astro";
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+import { Icon } from 'astro-icon/components';
+const title = "Warfactory 1.12.2";
+const description = "GregTechCeU modpack focused on high-stakes PVP. Highest quality faction events and optimized tech.";
+---
+
+<html lang="en">
+<head>
+    <Navbar />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+</head>
+<body class="bg-[#050505] text-white antialiased overflow-x-hidden selection:bg-red-500/30">
+
+<BackgroundCarousel />
+
+<main class="relative z-10 min-h-screen flex flex-col items-center justify-center px-6 py-20 opacity-0 animate-fade-in">
+
+    <div class="max-w-4xl text-center space-y-8">
+        <div class="relative inline-block">
+            <div class="absolute inset-0 bg-red-600/20 blur-3xl rounded-full"></div>
+            <img
+                    src="/logo.png"
+                    alt="Warfactory Logo"
+                    class="relative mx-auto w-48 md:w-56 drop-shadow-[0_0_35px_rgba(220,38,38,0.4)]"
+            />
+        </div>
+
+        <div class="space-y-4">
+            <h1 class="text-6xl md:text-9xl font-black tracking-tighter uppercase italic leading-none">
+                War<span class="text-red-600">factory</span>
+            </h1>
+            <p class="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto font-medium leading-relaxed drop-shadow-md">
+                {description}
+            </p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-4 md:gap-6 pt-8">
+            <div class="flex flex-wrap justify-center gap-4 md:gap-6 pt-8">
+                <a href="https://wiki.warfactory.co" target="_blank"
+                   class="px-10 py-4 bg-red-600 text-white font-bold uppercase tracking-widest hover:bg-red-700 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-red-900/20 flex items-center gap-3 group">
+                    Open Wiki
+                    <Icon name="lucide:external-link" class="w-4 h-4 opacity-70 group-hover:opacity-100 transition-opacity" />
+                </a>
+
+                <a href="https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack"
+                   target="_blank"
+                   class="px-10 py-4 bg-[#f16436]/10 border border-[#f16436]/30 text-[#f16436] font-bold uppercase tracking-widest hover:bg-[#f16436] hover:text-white hover:scale-105 active:scale-95 transition-all flex items-center gap-3 group shadow-lg shadow-[#f16436]/5">
+                    <Icon name="lucide:package-open" class="w-5 h-5 group-hover:animate-bounce" />
+                    CurseForge
+                </a>
+
+                <a href="/about"
+                   class="px-10 py-4 bg-white/5 backdrop-blur-xl border border-white/10 text-white font-bold uppercase tracking-widest hover:bg-white/10 hover:border-white/30 transition-all flex items-center gap-3">
+                    <Icon name="lucide:info" class="w-4 h-4 text-red-500" />
+                    About
+                </a>
+            </div>
+
+            <div class="flex flex-wrap justify-center items-center gap-4 mt-6">
+                <a href="https://www.youtube.com/@WarfactoryOffical" target="_blank"
+                   class="px-6 py-2 bg-white/5 border border-white/10 text-white/50 hover:text-red-500 transition-all flex items-center group text-[10px] uppercase font-bold tracking-widest">
+                    <Icon name="lucide:youtube" class="w-4 h-4 mr-2" /> YouTube
+                </a>
+
+                <a href="https://github.com/Warfactory-Official/" target="_blank"
+                   class="px-6 py-2 bg-white/5 border border-white/10 text-white/50 hover:text-white transition-all flex items-center group text-[10px] uppercase font-bold tracking-widest">
+                    <Icon name="lucide:github" class="w-4 h-4 mr-2" /> Github Organization
+                </a>
+
+                <a href="https://github.com/Warfactory-Official/Warfactory-2/releases/latest" target="_blank"
+                   class="px-6 py-2 bg-red-600/10 border border-red-600/20 text-red-500 hover:bg-red-600 hover:text-white transition-all flex items-center group text-[10px] uppercase font-bold tracking-widest italic">
+                    <Icon name="lucide:zap" class="w-4 h-4 mr-2 animate-pulse" /> Latest Release
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24 max-w-6xl w-full px-4">
+
+        <div class="group p-8 bg-black/40 backdrop-blur-2xl border border-white/5 hover:border-red-600/50 transition-all duration-500">
+            <div class="text-red-500 font-black text-xs tracking-[0.3em] uppercase mb-4">Conflict</div>
+            <h3 class="text-2xl font-bold mb-2">Total Mobilization</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Join massive faction wars with territory control, long-range artillery, and ballistic missiles. Every base is a target.</p>
+        </div>
+
+        <div class="group p-8 bg-black/40 backdrop-blur-2xl border border-white/5 hover:border-red-600/50 transition-all duration-500">
+            <div class="text-red-500 font-black text-xs tracking-[0.3em] uppercase mb-4">Industry</div>
+            <h3 class="text-2xl font-bold mb-2">GregTech Economy</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">A deep, integrated tech tree from basic steam power to advanced fusion. Build the industry that funds your war machine.</p>
+        </div>
+
+        <div class="group p-8 bg-black/40 backdrop-blur-2xl border border-white/5 hover:border-red-600/50 transition-all duration-500">
+            <div class="text-red-500 font-black text-xs tracking-[0.3em] uppercase mb-4">Expansion</div>
+            <h3 class="text-2xl font-bold mb-2">Space Frontier</h3>
+            <p class="text-gray-400 text-sm leading-relaxed">Launch satellites, colonize planets, and secure rare resources. The race for space dominance is the ultimate end-game.</p>
+        </div>
+
+    </div>
+
+</main>
+    <Footer />
+</body>
+</html>
+
+<style>
+    .animate-fade-in {
+        animation: fadeIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    h1, p {
+        text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+</style>

@@ -1,0 +1,164 @@
+﻿---
+import '../styles/global.css';
+import BackgroundCarousel from '../components/BackgroundCarousel.astro';
+import { Icon } from 'astro-icon/components';
+import Navbar from '../components/Navbar.astro';
+import Footer from "../components/Footer.astro";
+
+const title = "Mission & Tech";
+---
+
+<html lang="en">
+<head>
+    <Navbar />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title} | Warfactory</title>
+</head>
+<body class="bg-[#050505] text-white antialiased selection:bg-red-500/30">
+
+<BackgroundCarousel />
+
+<main class="relative z-10 max-w-5xl mx-auto px-6 py-12 md:py-24 opacity-0 animate-fade-in">
+
+    <header class="relative mb-32">
+        <div class="absolute -left-4 top-0 w-1 h-24 bg-red-600"></div>
+        <h1 class="text-7xl md:text-9xl font-black uppercase tracking-tighter leading-[0.8] mb-10">
+            THE <br/><span class="text-red-600">MISSION.</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-3xl">
+            Born from disappointment with the current faction "event" landscape. Warfactory provides a stable, balanced experience where <span class="text-white font-medium italic underline decoration-red-600 decoration-2">engineering meets total warfare.</span>
+        </p>
+    </header>
+
+    <div class="space-y-32">
+
+        <section class="grid md:grid-cols-5 gap-12 items-start">
+            <div class="md:col-span-3 space-y-6">
+                <div class="flex items-center gap-4 text-red-600">
+                    <Icon name="lucide:shield-check" class="w-8 h-8" />
+                    <h2 class="text-4xl font-black uppercase italic tracking-tighter">Warforge System</h2>
+                </div>
+                <p class="text-gray-400 text-lg leading-relaxed">
+                    Personal disappointment with unfinished faction "events" led us to create something better. Our custom fork of <span class="text-white font-bold">Warforge</span> addresses the lack of balanced raiding.
+                </p>
+                <p class="text-gray-400 leading-relaxed">
+                    No more offline raiding. Sieges require teams to hold positions to remove claim protections, ensuring combat is decided by skill and presence, not timing.
+                </p>
+            </div>
+            <div class="md:col-span-2 p-8 bg-white/[0.03] border border-white/10 backdrop-blur-xl relative group">
+                <h4 class="text-white font-black uppercase text-[10px] tracking-widest mb-6 border-b border-red-600 pb-2 inline-block">Custom Fork Features:</h4>
+                <ul class="space-y-4">
+                    <li class="flex gap-3 text-sm text-gray-400">
+                        <span class="text-red-600 font-bold font-mono">01</span> Revamped ore yield system
+                    </li>
+                    <li class="flex gap-3 text-sm text-gray-400">
+                        <span class="text-red-600 font-bold font-mono">02</span> GregTech & AE2 Logistics integration
+                    </li>
+                    <li class="flex gap-3 text-sm text-gray-400">
+                        <span class="text-red-600 font-bold font-mono">03</span> Balanced siege mechanics
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="grid md:grid-cols-2 gap-12">
+            <div class="space-y-6 p-10 bg-black/60 border border-white/5 backdrop-blur-2xl">
+                <div class="flex items-center gap-3">
+                    <Icon name="lucide:cpu" class="text-red-600 w-6 h-6" />
+                    <h2 class="text-2xl font-black uppercase tracking-widest">Applied Logistics</h2>
+                </div>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    Featuring <span class="text-white font-bold">AE2 Unofficial Extended Life</span> and specialized Fluid Crafting. Manage massive automation networks with zero compromise on performance.
+                </p>
+            </div>
+            <div class="space-y-6 p-10 bg-black/60 border border-white/5 backdrop-blur-2xl">
+                <div class="flex items-center gap-3">
+                    <Icon name="lucide:zap" class="text-red-600 w-6 h-6" />
+                    <h2 class="text-2xl font-black uppercase tracking-widest">Extreme Tuning</h2>
+                </div>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    Powered by <span class="text-white font-bold">LoliASM, FoamFix, and Hesperus</span>. We’ve tuned the 1.12.2 engine to handle complex GregTech multiblocks and massive storage systems without TPS drops.
+                </p>
+            </div>
+        </section>
+
+        <section class="relative">
+            <div class="absolute -inset-4 bg-red-600/5 -skew-y-1"></div>
+            <div class="relative p-12 border border-red-600/20 bg-black/40 backdrop-blur-md">
+                <div class="mb-12 flex items-center justify-between">
+                    <h2 class="text-4xl font-black uppercase tracking-tighter">Strategic Roadmap</h2>
+                    <span class="text-[10px] text-red-500 font-mono tracking-widest animate-pulse uppercase">Work in Progress</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-16">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-white font-black uppercase italic tracking-widest text-sm">
+                            <Icon name="lucide:atom" class="w-4 h-4 text-red-600" />
+                            HBM:NTM Integration
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            Porting the majority of 1.12 HBM:NTM Extended Edition content. While a difficult task with no end in sight, the utility it provides for PVP is unmatched.
+                        </p>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-white font-black uppercase italic tracking-widest text-sm">
+                            <Icon name="lucide:swords" class="w-4 h-4 text-red-600" />
+                            Combat Overhaul
+                        </div>
+                        <p class="text-xs text-gray-500 leading-relaxed">
+                            Moving away from creative flight meta. We are working on integrating high-quality infantry and vehicle mods for grounded, tactical engagements.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt-20 border-t border-white/10 flex flex-col md:flex-row gap-12 justify-between items-center pb-20">
+            <div class="max-w-md space-y-6">
+                <h2 class="text-3xl font-black uppercase tracking-tighter">Anticheat & FOSS</h2>
+                <p class="text-sm text-gray-500 leading-relaxed italic">
+                    We are open source! Track our entire project on GitHub. While some parts like our custom Anticheat remain obfuscated to deter exploitation, we believe in a transparent ecosystem.
+                </p>
+                <div class="flex gap-6">
+                    <a href="https://github.com/Warfactory-Official/" target="_blank" class="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-white hover:text-red-500 transition-colors">
+                        <Icon name="lucide:github" class="w-4 h-4" /> Organization
+                    </a>
+                </div>
+            </div>
+
+            <div class="relative group max-w-sm w-full">
+                <div class="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-900 blur opacity-20 group-hover:opacity-40 transition duration-700"></div>
+                <div class="relative p-10 bg-black/90 border border-white/10 space-y-6">
+                    <h2 class="text-3xl font-black uppercase tracking-tighter leading-none text-white">
+                        Repurpose <br/><span class="text-red-600">& Improve.</span>
+                    </h2>
+                    <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">
+                        Feel free to repurpose our code for your own use. Join the FOSS Minecraft space.
+                    </p>
+                    <a href="https://github.com/Warfactory-Official/" target="_blank" class="inline-flex items-center gap-4 text-white font-black uppercase text-[10px] tracking-[0.3em] group/btn">
+                        View Organization
+                        <Icon name="lucide:arrow-right" class="text-red-600 group-hover:translate-x-2 transition-transform" />
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+<Footer />
+
+</body>
+</html>
+
+<style>
+    .animate-fade-in {
+        animation: fadeIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
