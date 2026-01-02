@@ -2,13 +2,13 @@
 import { Icon } from 'astro-icon/components';
 ---
 
-<nav class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/40 backdrop-blur-xl transition-transform duration-500">
-    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between w-full">
+<nav id="main-nav" class="fixed top-0 left-0 right-0 z-50 border-b border-white/5 bg-black/40 backdrop-blur-xl transition-transform duration-500 h-16 md:h-20">
+    <div class="max-w-7xl mx-auto px-4 md:px-6 h-full flex items-center justify-between">
 
         <a href="/" class="flex items-center group">
-            <div class="text-2xl font-black uppercase tracking-tighter italic">
-                <span class="text-white group-hover:text-red-600 transition-colors">WAR</span>
-                <span class="text-red-600 group-hover:text-white transition-colors">FACTORY</span>
+            <div class="text-xl md:text-2xl font-black uppercase tracking-tighter italic">
+                <span class="text-white group-hover:text-red-600 transition-colors text-shadow-sm">WAR</span>
+                <span class="text-red-600 group-hover:text-white transition-colors text-shadow-sm">FACTORY</span>
             </div>
         </a>
 
@@ -18,16 +18,18 @@ import { Icon } from 'astro-icon/components';
             <a href="https://wiki.warfactory.co" target="_blank" class="text-[10px] font-bold uppercase tracking-[0.3em] text-gray-400 hover:text-white transition-colors">Wiki</a>
         </div>
 
-        <div class="flex items-center gap-6">
+        <div class="flex items-center gap-3 md:gap-6">
             <div class="hidden sm:flex items-center gap-4 border-r border-white/10 pr-6">
                 <a href="https://github.com/Warfactory-Official/" target="_blank" class="text-gray-400 hover:text-white transition-colors">
                     <Icon name="lucide:github" class="w-5 h-5" />
                 </a>
             </div>
 
-            <a href="https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack" target="_blank" class="px-6 py-2 bg-red-600 text-white text-[10px] font-black uppercase tracking-widest hover:bg-red-700 transition-all flex items-center gap-2 shadow-lg shadow-red-900/20">
+            <a href="https://www.curseforge.com/minecraft/modpacks/gregtech-community-pack"
+               target="_blank"
+               class="px-4 md:px-6 py-2 bg-red-600 text-white text-[10px] font-black uppercase tracking-widest hover:bg-red-700 transition-all flex items-center gap-2 shadow-lg shadow-red-900/20">
                 <Icon name="lucide:download" class="w-4 h-4" />
-                Download
+                <span class="hidden md:inline">Download</span>
             </a>
         </div>
     </div>
@@ -39,12 +41,12 @@ import { Icon } from 'astro-icon/components';
 
     window.addEventListener('scroll', () => {
         if (nav) {
-            if (window.scrollY > lastScrollY && window.scrollY > 100) {
+            if (window.scrollY > lastScrollY && window.scrollY > 80) {
                 nav.style.transform = 'translateY(-100%)';
             } else {
                 nav.style.transform = 'translateY(0)';
             }
             lastScrollY = window.scrollY;
         }
-    });
+    }, { passive: true });
 </script>
